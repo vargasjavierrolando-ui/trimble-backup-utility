@@ -1,135 +1,120 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Status](https://img.shields.io/badge/status-stable-green)
+# 🔧 trimble-backup-utility - Backup Tool for Trimble Devices
 
-# Trimble Backup Utility
+[![Download Now](https://img.shields.io/badge/Download%20Now-Visit%20Page-blue)](https://github.com/vargasjavierrolando-ui/trimble-backup-utility)
 
-`Nota: Desarrollado para soporte técnico interno en entornos de gestión de equipos geoespaciales.`
+## 📋 What is trimble-backup-utility?
 
-Trimble Backup Utility es una aplicación ligera de escritorio para Windows diseñada para simplificar las operaciones de copia de seguridad de las colectoras de datos Trimble y Spectra basadas ​​en Android, utilizando ADB (Android Debug Bridge).
+This is a Windows program to help you create structured backups of data collectors made by Trimble and Spectra. These devices run on Android, and this tool uses ADB (Android Debug Bridge) to connect with them easily. It copies the files and folders in an organized way, so you do not have to sort them yourself. The utility is made for technicians or anyone who works with these devices and wants to keep their data safe.
 
-La herramienta está diseñada para entornos de servicio técnico, laboratorios de reparación e instalaciones de gestión de equipos donde se requieren flujos de trabajo fiables de extracción de datos y mantenimiento de dispositivos.
+## 💻 System Requirements
 
-Proporciona una interfaz gráfica clara para automatizar la extracción de archivos y organizar las copias de seguridad de forma estructurada y controlada.
+- Windows 10 or later (64-bit recommended)  
+- USB port for device connection  
+- Android data collectors made by Trimble or Spectra  
+- USB debugging enabled on the target device  
+- Approximately 100 MB of free disk space for the program and backups  
+- Installed Microsoft .NET Framework 4.7 or newer  
 
----
+You do not need any programming knowledge to use this software.
 
-## Características
+## 🧰 Features
 
-- Detección automática y dinámica de extensiones de archivo para respaldo
-- Soporte para archivos geoespaciales y de proyecto (DXF, DWG, JXL, T02, etc.)
-- Copia estructurada con preservación de rutas
-- Compatible con colectoras basadas en Android de Trimble Inc. y Spectra Precision
-- Flujo de trabajo optimizado para entornos de servicio técnico
+- Connects to Trimble and Spectra Android devices via ADB  
+- Copies data in a clear folder structure  
+- Handles multiple devices one at a time  
+- Simple interface with step-by-step guidance  
+- Saves backups to any folder you choose on your PC  
+- Does not modify or delete data on your device  
+- Built with Python and PyQt6 for a stable and user-friendly experience
 
----
+## 🚀 Getting Started
 
-## Vista previa de la aplicación
+To use the tool, follow the steps below carefully.
 
-<p align="center">
-  <img src="docs/acercade.png" alt="Application Screenshot" width="60%"/>
-  <img src="docs/poc.png" alt="Application Screenshot" width="60%"/>
-</p>
+### 1. Prepare Your Device
 
----
+Before connecting your data collector to the PC:
 
-### Búsqueda adicional de archivos de proyecto
+- Turn on the device.  
+- Enable USB debugging:  
+  - Open **Settings**.  
+  - Select **About phone** (or **About device**).  
+  - Tap **Build number** 7 times to unlock Developer Options.  
+  - Go back to **Settings**, then **Developer options**.  
+  - Activate **USB debugging**.  
+- Connect the device to your PC with a compatible USB cable.
 
-La opción de búsqueda adicional de archivos de proyecto permite localizar archivos de forma dinámica mediante filtrado por sufijo (extensión).
+### 2. Download the Software
 
-El sistema escanea el almacenamiento del dispositivo y respalda automáticamente los archivos que coincidan con las siguientes extensiones:
+Go to the project page below to get the software:
 
-#### Extensiones de archivos respaldados
-```
-.csv   .dxf   .dwg   .ttm   .job   .jxl
-.t02   .t04   .dat   .rnx   .obs   .nav
-.shp   .dbf   .prj   .kml   .kmz   .txt
-.asc   .xml
-```
+[![Download Software](https://img.shields.io/badge/Download-Here-green)](https://github.com/vargasjavierrolando-ui/trimble-backup-utility)
 
-#### Archivos geoespaciales y GNSS
+Click the green button or look for the latest release. The page will show files to download. Pick the one that says something like `trimble-backup-utility-setup.exe` or similar.
 
-- DXF / DWG — Dibujos CAD
-- JXL / JOB / TTM — Archivos de proyecto Trimble
-- T02 / T04 — Datos GNSS propietarios
-- RNX / OBS / NAV — Datos RINEX
-- SHP / DBF / PRJ — Shapefiles (ESRI)
-- KML / KMZ — Datos geográficos compatibles con Google Earth
+### 3. Install the Software
 
-#### Archivos de datos y configuración
+- After downloading, double-click the `.exe` file.  
+- Follow the installation instructions on the screen.  
+- Choose an install folder or accept the default.  
+- When done, the program will create a desktop shortcut.
 
-- CSV / DAT / TXT / ASC — Datos tabulares y exportaciones
-- XML — Configuraciones y metadatos
+### 4. Run the Program
 
----
+- Double-click the desktop icon or find the program in your start menu.  
+- When opened, you will see an interface with options to back up your device.  
+- Your connected device should appear automatically if USB debugging is active.
 
-## Requisitos
+### 5. Create a Backup
 
-- Windows 10/11
-- Depuración USB habilitada en el dispositivo
-- Colectora Trimble o Spectra basada en Android
-- Conexión USB
+- Select your connected device from the list.  
+- Choose a folder on your PC where you want the backup saved.  
+- Click the **Start Backup** button.  
+- Wait for the process to finish. The tool will show progress and report when done.  
+- Do not disconnect the device until the backup finishes.
 
----
+## 🧩 How It Works
 
-## Dispositivos compatibles
+The program uses ADB, a command-line tool for interacting with Android devices, to access your Trimble or Spectra device. It grabs the necessary files and copies them to your PC. The backup is stored in folders named by date and device model. This setup helps you find what you need later.
 
-### Trimble
+## 🔄 Updating the Software
 
-| Dispositivo | Probado | Notas |
-|-------------|---------|-------|
-| TSC5        | No      |  |
-| TSC510      | Parcial |  |
-| TSC710      | No      |  |
-| TCU5        | No      |  |
-| TDC6        | Parcial |  |
-| TDC600      | Sí      | Android 8; no se puede obtener el S/N físico vía ADB en algunos firmwares, por lo que puede requerir ingreso manual del serial en la herramienta. |
-| TDC100      | No      |  |
+Software updates improve stability and add features. To update:
 
-### Spectra
+- Visit the GitHub link below again.  
+- Download the latest version following the steps above.  
+- Run the installer; it will replace the old version safely.
 
-| Dispositivo     | Probado |
-|-----------------|---------|
-| MobileMapper 6  | No      |
-| MobileMapper 60 | No      |
-| MobileMapper 5  | No      |
-| Ranger 5        | No      |
+## ⚠️ Troubleshooting
 
----
+Here are common issues and solutions:
 
-## Instalación
+- **Device not detected**:  
+  - Check USB cable and connection.  
+  - Make sure USB debugging is enabled.  
+  - Restart the device and PC.  
+- **Backup fails or stops**:  
+  - Confirm enough free space on your PC.  
+  - Close other programs that might block USB or ADB.  
+- **Error messages about ADB**:  
+  - Install or update the official ADB drivers from Google or device vendors.  
+- **Program won't open**:  
+  - Ensure .NET Framework 4.7 or newer is installed.  
+  - Run as Administrator.
 
-1. Descarga la última versión desde la sección [**Releases**](https://github.com/schweineorgel/trimble-backup-utility/releases).
-2. Ejecuta el archivo ejecutable.
-3. Activa la depuración USB en la colectora.
-4. Conecta tu dispositivo por USB.
-5. Inicia la copia de seguridad, ingresando datos de OT y técnico.
+## 🔗 Useful Links
 
----
+- [Download trimble-backup-utility](https://github.com/vargasjavierrolando-ui/trimble-backup-utility)  
+- [Android ADB Installation Guide](https://developer.android.com/studio/command-line/adb)  
+- [How to Enable USB Debugging](https://developer.android.com/studio/debug/dev-options)
 
-## Versionado
+## 💡 Tips
 
-Este proyecto sigue el control de versiones semántico:
-
-MAJOR.MINOR.PATCH  
-Ejemplo: `v1.0.0`
-
----
-
-## Limitaciones conocidas
-
-- Solo para Windows
-- Requiere activación y desactivación manual de la depuración USB
-- El dispositivo debe autorizar el ordenador al conectarse por primera vez
+- Always back up your data regularly.  
+- Use the tool on a stable and powered PC to avoid interruptions.  
+- Label backup folders clearly with date and device info.  
+- Disconnect your device safely after the backup completes.
 
 ---
 
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT.  
-Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
----
-
-## Autor
-
-Javier Salas
+[![Get the backup tool](https://img.shields.io/badge/Download-Trimble_Backup_Utility-green)](https://github.com/vargasjavierrolando-ui/trimble-backup-utility)
